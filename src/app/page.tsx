@@ -1,4 +1,4 @@
-import CVContainer from "@/CV/CVContainer";
+import CVContainer from "./cv/CVContainer";
 
 export default function HomePage() {
   return <CVContainer />;
