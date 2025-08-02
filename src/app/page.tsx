@@ -24,11 +24,11 @@ export default function HomePage() {
         </button>
       </div>
 
-      <Modal title="My CV" isOpen={showCV} onClose={() => setShowCV(false)}>
+      <Modal isOpen={showCV} onClose={() => setShowCV(false)}>
         <CVContent />
       </Modal>
 
-      <Modal title="Personal Statement" isOpen={showPS} onClose={() => setShowPS(false)}>
+      <Modal isOpen={showPS} onClose={() => setShowPS(false)}>
         <PersonalStatement />
       </Modal>
 

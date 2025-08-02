@@ -29,6 +29,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
           className="absolute top-3 right-3 text-black hover:text-gray-700 text-xl">
           &times;
         </button>
+
         <div className="overflow-y-auto max-h-[70vh] text-black">{children}</div>
       </div>
 
