@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Modal from './components/Modal';
 import CVContent from './cv/CVContent';
 import PersonalStatement from './ps/PersonalStatement';
-import SpotifyBox from './spotify/SpotifyBox';
+import SpotifyBox from './Spotify/SpotifyBox';
 
 export default function HomePage() {
   const [showCV, setShowCV] = useState(false);
