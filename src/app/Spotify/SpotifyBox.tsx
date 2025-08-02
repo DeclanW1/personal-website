@@ -9,7 +9,7 @@ export default function SpotifyBox() {
       <button
         onClick={() => setOpen(!open)}
         className="bg-white text-black text-lg font-medium py-4 px-6 rounded-lg border border-black hover:shadow-md transition-all w-full text-left">
-        What I'd consider to be the top 100 songs ever (work in progress)
+        What I would consider to be the top 100 songs ever (work in progress)
       </button>
 
       {open && (
