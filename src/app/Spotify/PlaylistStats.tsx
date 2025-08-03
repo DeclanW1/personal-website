@@ -50,7 +50,7 @@ export default function PlaylistStats() {
       <div className="md:col-span-2 border border-black rounded-lg p-4">
         <h3 className="font-bold mb-2">Most Popular Track</h3>
         <p className="text-lg italic">
-          "{mostPopular.name}" by {mostPopular.artist} (Popularity: {mostPopular.popularity})
+          "{mostPopular.name}" by {mostPopular.artist}
         </p>
       </div>
     </div>
