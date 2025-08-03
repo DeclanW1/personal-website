@@ -1,5 +1,14 @@
 import { NextResponse } from 'next/server';
 
+type PlaylistItem = {
+  track: {
+    name: string;
+    artists: { name: string }[];
+    duration_ms: number;
+    popularity: number;
+  };
+};
+
 export async function GET() {
   try {
     const clientId = process.env.SPOTIFY_CLIENT_ID!;
@@ -44,9 +53,9 @@ export async function GET() {
       return NextResponse.json({ error: 'Failed to fetch playlist' }, { status: 500 });
     }
 
-    const simplifiedTracks = playlistData.items
-      .filter((item: any) => item.track)
-      .map((item: any) => ({
+    const simplifiedTracks = (playlistData.items as PlaylistItem[])
+      .filter((item) => item.track)
+      .map((item) => ({
         name: item.track.name,
         artist: item.track.artists[0]?.name || 'Unknown',
         durationMs: item.track.duration_ms,
@@ -56,8 +65,8 @@ export async function GET() {
     console.log(`Returning ${simplifiedTracks.length} tracks`);
 
     return NextResponse.json(simplifiedTracks);
-  } catch (err: any) {
-    console.error('Unexpected error:', err);
+  } catch (err: unknown) {
+    console.error('Unexpected error:', err instanceof Error ? err.message : err);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

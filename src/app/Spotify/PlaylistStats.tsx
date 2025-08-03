@@ -16,8 +16,12 @@ export default function PlaylistStats() {
         if (!res.ok) throw new Error(data.error || 'Unknown error');
 
         setTracks(data);
-      } catch (err: any) {
-        setError(err.message || 'Fetch error');
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred');
+        }
       }
     }
 
@@ -50,7 +54,7 @@ export default function PlaylistStats() {
       <div className="md:col-span-2 border border-black rounded-lg p-4">
         <h3 className="font-bold mb-2">Most Popular Track</h3>
         <p className="text-lg italic">
-          "{mostPopular.name}" by {mostPopular.artist}
+          &quot;{mostPopular.name}&quot; by {mostPopular.artist}
         </p>
       </div>
     </div>
