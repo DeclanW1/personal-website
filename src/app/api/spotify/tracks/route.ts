@@ -14,6 +14,10 @@ export async function GET() {
     const clientId = process.env.SPOTIFY_CLIENT_ID!;
     const clientSecret = process.env.SPOTIFY_CLIENT_SECRET!;
     const playlistId = '5boLwfhhUnqka202FQLNGs';
+
+    console.log("SPOTIFY_CLIENT_ID:", clientId ? "[SET]" : "MISSING");
+    console.log("SPOTIFY_CLIENT_SECRET:", clientSecret ? "[SET]" : "MISSING");
+    
     console.log('Fetching Spotify access token...');
 
     const tokenRes = await fetch('https://accounts.spotify.com/api/token', {
