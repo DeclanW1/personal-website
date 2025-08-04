@@ -38,7 +38,7 @@ export default function HomePage() {
           <button
             onClick={() => setShowPS(true)}
             className="bg-white text-[#7c3f00] border border-[#d3c5b0] text-lg font-medium py-4 px-6 rounded-lg hover:bg-[#fdf6f0] transition-all w-full">
-            My Personal Statement
+            Learn more about me!
           </button>
 
           <Link href="/Spotify">
@@ -51,7 +51,7 @@ export default function HomePage() {
       </div>
 
       <div className="flex flex-col items-center mb-12">
-        <h2 className="text-xl font-semibold mb-4">Tech I Use</h2>
+        <h2 className="text-xl font-semibold mb-4">Some of the Tech I use</h2>
         <div className="flex flex-wrap justify-center gap-6 text-4xl">
           <SiJavascript title="JavaScript" />
           <SiTypescript title="TypeScript" />
