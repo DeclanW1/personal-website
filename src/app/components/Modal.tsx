@@ -22,7 +22,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div
-        className="bg-white border border-black rounded-lg shadow-lg w-[90%] max-w-2xl p-6 relative z-10"
+        className="bg-white border border-black rounded-lg shadow-lg w-[90%] max-w-5xl p-6 relative z-10"
         onClick={(e) => e.stopPropagation()}>
         <button
           onClick={onClose}

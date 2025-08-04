@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import Modal from './components/Modal';
 import CVContent from './cv/CVContent';
 import PersonalStatement from './ps/PersonalStatement';
-import SpotifyBox from './Spotify/SpotifyBox';
 
 export default function HomePage() {
   const [showCV, setShowCV] = useState(false);
@@ -22,6 +22,13 @@ export default function HomePage() {
           className="bg-white text-black text-lg font-medium py-4 rounded-lg border border-black hover:shadow-md transition-all">
           My Personal Statement
         </button>
+
+        <Link href="/Spotify">
+          <button
+            className="bg-white text-black text-lg font-medium py-4 rounded-lg border border-black hover:shadow-md transition-all">
+            What I would consider to be the top 100 songs, ever. (work in progress)
+          </button>
+        </Link>
       </div>
 
       <Modal isOpen={showCV} onClose={() => setShowCV(false)}>
@@ -31,8 +38,6 @@ export default function HomePage() {
       <Modal isOpen={showPS} onClose={() => setShowPS(false)}>
         <PersonalStatement />
       </Modal>
-
-      <SpotifyBox />
     </main>
   );
 }
