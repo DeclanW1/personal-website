@@ -11,7 +11,7 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen gap-6 p-4 bg-white">
-      <div className="flex flex-col gap-4 w-full max-w-xs">
+      <div className="flex flex-col gap-4 w-full max-w-lg">
         <button
           onClick={() => setShowCV(true)}
           className="bg-white text-black text-lg font-medium py-4 rounded-lg border border-black hover:shadow-md transition-all">
