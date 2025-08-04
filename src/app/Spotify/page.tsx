@@ -19,7 +19,7 @@ export default function SpotifyPage() {
       <div className="text-center mb-6">
         <h2 className="text-2xl font-semibold mb-2">Want to know some stats about this playlist?</h2>
         <p className="text-md text-[#5b4a4a]">
-          Here's a breakdown of the average song length and most popular song in this playlist.
+          Here is a breakdown of the average song length and most popular song in this playlist.
         </p>
       </div>
 
