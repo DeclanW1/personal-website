@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import CVModal from '../cv/CVModal';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-
 export default function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
