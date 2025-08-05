@@ -8,24 +8,31 @@ export default function Projects() {
 
   const placeholderProjects = [
     {
-      title: 'spotify',
+      title: 'Spotify Playlist Insights',
       slug: 'spotify',
       image: '',
+      published: true,
     },
     {
       title: 'Project Two',
       slug: 'project-two',
       image: '/images/project2.png',
+      published: false,
     },
     {
       title: 'Project Three',
       slug: 'project-three',
       image: '/images/project3.png',
+      published: false,
     },
   ];
 
-  const handleRedirect = (slug: string) => {
-    router.push(`/projects/${slug}`); 
+  const handleRedirect = (slug: string, published: boolean) => {
+    if (published) {
+      router.push(`/projects/${slug}`);
+    } else {
+      router.push('/comingsoon');
+    }
   };
 
   return (
@@ -36,15 +43,21 @@ export default function Projects() {
         {placeholderProjects.map((project, index) => (
           <div
             key={index}
-            onClick={() => handleRedirect(project.slug)}
+            onClick={() => handleRedirect(project.slug, project.published)}
             className="bg-[#6D4C41] p-6 rounded-xl shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl h-96 flex flex-col">
-            <h3 className="text-xl font-bold text-white mb-4">{project.title}</h3>
+            <h3 className="text-xl font-bold text-white mb-4">
+              {project.title}
+            </h3>
             <div className="w-full h-64 bg-[#8D6E63] rounded-md overflow-hidden flex items-center justify-center">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="object-cover h-full w-full"
-              />
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover h-full w-full"
+                />
+              ) : (
+                <span className="text-[#D7CCC8]">No preview available</span>
+              )}
             </div>
           </div>
         ))}
@@ -58,4 +71,3 @@ export default function Projects() {
     </section>
   );
 }
-
