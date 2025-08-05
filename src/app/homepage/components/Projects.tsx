@@ -10,19 +10,19 @@ export default function Projects() {
     {
       title: 'Spotify Playlist Insights',
       slug: 'spotify',
-      image: '',
+      image: '/project-1.png',
       published: true,
     },
     {
       title: 'Project Two',
       slug: 'project-two',
-      image: '/images/project2.png',
+      image: '',
       published: false,
     },
     {
       title: 'Project Three',
       slug: 'project-three',
-      image: '/images/project3.png',
+      image: '',
       published: false,
     },
   ];
