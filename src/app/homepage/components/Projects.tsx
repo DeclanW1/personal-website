@@ -8,9 +8,9 @@ export default function Projects() {
 
   const placeholderProjects = [
     {
-      title: 'Project One',
-      slug: 'project-one',
-      image: '/images/project1.png',
+      title: 'spotify',
+      slug: 'spotify',
+      image: '',
     },
     {
       title: 'Project Two',
