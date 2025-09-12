@@ -6,8 +6,6 @@ export default function CVContent() {
     <section className="text-right text-sm sm:text-base px-4">
       <h2 className="text-xl font-semibold mb-2">Personal Details</h2>
       <p>Name: Declan Wood</p>
-      {/*<p>Email: john@example.com</p>
-      <p>Phone: 01234 567890</p>*/}
     </section>
 
     <section className="mb-8">
